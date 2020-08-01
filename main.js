@@ -18,6 +18,7 @@ window.onclick = function() {
 }
 
 function preparation() {
+    console.log("Prepare");
     ctx = new AudioContext();
     analyser = ctx.createAnalyser();
     source = ctx.createMediaElementSource(audio);
