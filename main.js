@@ -1,6 +1,6 @@
 let audio, ctx, analyser, source, array, logo;
 
-logo  = document.getElementById('logo');
+logo  = document.getElementById('logo').style;
 audio = document.getElementById('audio');
 
 window.onclick = function() {
