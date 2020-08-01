@@ -4,12 +4,13 @@ logo  = document.getElementById('logo');
 audio = document.getElementById('audio');
 
 window.onclick = function() {
-    if (!context) {
+    if (!ctx) {
        preparation(); 
     }
     
     if (audio.paused) {
-      audio.play();  
+        audio.play();  
+        loop();
     } else {
         audio.pause();
     }
