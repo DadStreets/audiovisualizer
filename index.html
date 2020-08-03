@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Audio Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay-multicolor"></div>
+    <audio src="NicholasJRobbins-RainPour.mp3" id="audio"></audio>
+    <div class="bars-box-back"></div>
+    <div class="bars-box"></div>
+    <div class="bars-box-front"></div>
+    <div class="setting-menu">
+        <div class="open-button">
+            <button id="settingOpen">
+                <span></span>
+            </button>
+        </div>
+
+        <p class="setting-line">
+            Color scheme:
+        </p>
+        <select id="selectColorful">
+            <option value="default" selected>Default</option>
+            <option value="orange">Orange</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="cyan">Cyan</option>
+            <option value="white">White</option>
+            <option value="black">Black</option>
+            <option value="multicolor">Multicolor</option>
+            <option value="multicolor-self">Multicolor Self</option>
+            <option value="negative">Negative (Coming soon)</option>
+        </select>
+
+        <p class="setting-line">
+            Background color (in HEX):
+        </p>
+        <input type="text" value="#121217" id="bgColor">
+
+        <p class="setting-line">
+            Back bars height:
+        </p>
+        <div class="flex-align-center">
+            <input id="rangeBackBars" class="range" type="range" min="0" max="10" step="0.1" value="5">
+            <span class="range-value" id="rangeBackBarsValue">5</span>
+        </div>
+
+        <p class="setting-line">
+            Central bars height:
+        </p>
+        <div class="flex-align-center">
+            <input id="rangeCentralBars" class="range" type="range" min="0" max="7.5" step="0.1" value="3">
+            <span class="range-value" id="rangeCentralBarsValue">3</span>
+        </div>
+
+        <p class="setting-line">
+            Front bars height:
+        </p>
+        <div class="flex-align-center">
+            <input id="rangeFrontBars" class="range" type="range" min="0" max="5" step="0.1" value="1.5">
+            <span class="range-value" id="rangeFrontBarsValue">1.5</span>
+        </div>
+
+        <label for="audioUpload" class="audio-upload-button">Upload your file</label>
+        <input type="file" id="audioUpload">
+
+    </div>
+
+    <span class="status-play">►</span>
+    <span class="status-pause">=</span>
+    <script src="main.js"></script>
+</body>
+</html>
