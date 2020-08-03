@@ -121,14 +121,14 @@ selectColorful.addEventListener('change', () => {
             colorScheme = null;
             overlayMulticolor.style.display = 'block';
             selectBgColor.disabled = 'true';
-            selectBgColor.value = '#180f18';
+            selectBgColor.value = '#0b0b0b';
             document.body.style.background = selectBgColor.value;
             break;
         case 'multicolor-self':
             colorScheme = 'rgb(255,40,40)';
             overlayMulticolor.style.display = 'block';
             selectBgColor.disabled = 'true';
-            selectBgColor.value = '#180f18';
+            selectBgColor.value = '#0b0b0b';
             document.body.style.background = selectBgColor.value;
             break;
         default:
